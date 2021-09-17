@@ -48,13 +48,13 @@ peculiar2 = loci2Set - loci1Set
 #Write the sorted first fastq file
 print("Writing file ",outfileName1)
 with open(outfileName1,"w") as handle :
-    for locus in lociCommon:
+    for locus in sorted(lociCommon):
         SeqIO.write(loci1[locus],handle,"fastq")
 
 #Write the sorted second fastq file
 print("Writing file ",outfileName2)
 with open(outfileName2,"w") as handle :
-    for locus in lociCommon:
+    for locus in sorted(lociCommon):
         SeqIO.write(loci2[locus],handle,"fastq")
 
 #write singletons

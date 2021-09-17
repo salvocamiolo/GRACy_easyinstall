@@ -698,6 +698,7 @@ class Ui_Form(object):
 
 				outfile = open(projectName+"_genome.fasta","w")
 				outfile.write(">finalScaffold\n"+finalSequence)
+				outfile.close()
 
 
 
